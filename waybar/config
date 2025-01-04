@@ -8,7 +8,15 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
+        "custom/player"
     ],
+    "custom/player": {
+        "exec": "~/.config/waybar/scripts/player",
+        "format": "{}",
+        "interval": 2,
+        "return-type": "json",
+        "on-click": "playerctl play-pause"
+    },
     "modules-right": [
         "tray",
         "network",

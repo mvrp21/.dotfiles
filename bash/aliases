@@ -1,8 +1,11 @@
 #
 # aliases (& functions)
 #
+# ==================== XDG SHENANIGANS ===================== #
 alias gpg='gpg2 --homedir "$XDG_CONFIG_HOME"/gnupg'
 alias gpg2='gpg2 --homedir "$XDG_CONFIG_HOME"/gnupg'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+# turns out wget does not support env vars, so it needs either an alias or manual absolute path setting in the wgetrc
 
 # ==================== COLORS ===================== #
 alias ls='ls -v --color=auto'
@@ -30,6 +33,7 @@ alias cdm='cd ~/Music/'
 alias cds='cd ~/Stuff/'
 alias cdb='cd ~/Stuff/books/'
 alias cdp='cd ~/Stuff/projects/'
+alias cdw='cd ~/Stuff/projects/website'
 
 # ==================== STOOPID ==================== #
 alias dc='cd'

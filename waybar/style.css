@@ -1,17 +1,39 @@
-@import 'colors-waybar.css';
-
 /* totally didn't just glue together two configs I found that I liked */
+@define-color foreground #bfbfc0;
+@define-color background #010103;
+@define-color cursor #bfbfc0;
+
+@define-color color0 #010103;
+@define-color color1 #147381;
+@define-color color2 #4e7678;
+@define-color color3 #586f88;
+@define-color color4 #697387;
+@define-color color5 #7c7885;
+@define-color color6 #a78487;
+@define-color color7 #808081;
+@define-color color8 #404042;
+@define-color color9 #1B9AAD;
+@define-color color10 #699EA1;
+@define-color color11 #7695B6;
+@define-color color12 #8C9AB4;
+@define-color color13 #A6A1B2;
+@define-color color14 #DFB1B5;
+@define-color color15 #bfbfc0;
 
 * {
     font-family: Iosevka;
     font-size: 14px;
+    transition: none;
+    border: none;
+    box-shadow: none;
+    background: none;
 }
 
 window#waybar {
     background-color: rgba(0, 0, 0, 0.7);
     color: @foreground;
-    transition-property: background-color;
-    /* transition-duration: 0.5s; */ 
+    /*transition-property: background-color;
+    transition-duration: 0.5s; */ 
 }
 
 window#waybar.hidden {
@@ -20,8 +42,8 @@ window#waybar.hidden {
 
 #window {
     color: @foreground;
+    background-color: @background;
 }
-
 
 
 #clock,
@@ -62,17 +84,20 @@ window#waybar.hidden {
     font-weight: bold;
 }
 
-#workspaces {
-}
-
 #workspaces button {
     color: @color11;
-    box-shadow: inset 0 -3px transparent;
     margin-right: 0em;
+    padding-right: 1rem;
+    box-shadow: inset 0 -3px transparent;
     /* transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68); */
 }
 
-#workspaces button.active {
+/*#workspaces button.active {*/
+#workspaces button:hover {
+    background: none;
+    box-shadow: none;
+    /*border: none;*/
+    text-shadow: none;
     /* color: @color9; */
     color: #1793d1;
     font-weight: bold;
@@ -80,7 +105,18 @@ window#waybar.hidden {
     /* transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68); */
 }
 
-/* If workspaces is the leftmost module, omit left margin */
+/*#workspaces button.hover {*/
+#workspaces button.active {
+    background: none;
+    box-shadow: none;
+    border: none;
+    font-weight: bold;
+    text-shadow: none;
+    background-color: #1793d1;
+    color: @background;
+}
+
+/* If workspaces is the leftmot module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
