@@ -20,7 +20,7 @@ vim.keymap.set('n', '+', '<C-W>>')
 vim.keymap.set('n', '_', '<C-W><')
 
 -- paste buffer over selection without overriding it
-vim.keymap.set('x', '<C-p>', '"_dP')
+-- (never actually use this...) vim.keymap.set('x', '<C-p>', '"_dP')
 
 -- copy to system clipboard with Y
 vim.keymap.set('v', 'Y', '"+y')
@@ -37,14 +37,19 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>')
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>')
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>')
 
--- nao ria n tem graca
-vim.api.nvim_create_user_command('Q',  'q' , { nargs = 0 })
-vim.api.nvim_create_user_command('Qw', 'wq', { nargs = 0 })
-vim.api.nvim_create_user_command('QW', 'wq', { nargs = 0 })
-vim.api.nvim_create_user_command('W',  'w',  { nargs = 0 })
-vim.api.nvim_create_user_command('Wq', 'wq', { nargs = 0 })
-vim.api.nvim_create_user_command('WQ', 'wq', { nargs = 0 })
-vim.api.nvim_create_user_command('VS', 'vs', { nargs = 0 })
-vim.api.nvim_create_user_command('Vs', 'vs', { nargs = 0 })
-vim.api.nvim_create_user_command('SV', 'sv', { nargs = 0 })
-vim.api.nvim_create_user_command('Sv', 'sv', { nargs = 0 })
+-- let's try tabs
+vim.keymap.set('n', '<C-t><C-t>', ':tab split<CR>')
+vim.keymap.set('n', '<C-t><C-p>', ':tabprevious<CR>')
+vim.keymap.set('n', '<C-t><C-n>', ':tabnext<CR>')
+
+-- don't laugh, it's not funny
+vim.api.nvim_create_user_command('Q', 'silent q', { nargs = 0 })
+vim.api.nvim_create_user_command('Qw', 'silent wq', { nargs = 0 })
+vim.api.nvim_create_user_command('QW', 'silent wq', { nargs = 0 })
+vim.api.nvim_create_user_command('W', 'silent w', { nargs = 0 })
+vim.api.nvim_create_user_command('Wq', 'silent wq', { nargs = 0 })
+vim.api.nvim_create_user_command('WQ', 'silent wq', { nargs = 0 })
+vim.api.nvim_create_user_command('VS', 'silent vs', { nargs = 0 })
+vim.api.nvim_create_user_command('Vs', 'silent vs', { nargs = 0 })
+vim.api.nvim_create_user_command('SV', 'silent sv', { nargs = 0 })
+vim.api.nvim_create_user_command('Sv', 'silent sv', { nargs = 0 })

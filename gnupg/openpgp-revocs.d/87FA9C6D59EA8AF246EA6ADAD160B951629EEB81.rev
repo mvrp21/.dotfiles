@@ -1,0 +1,37 @@
+This is a revocation certificate for the OpenPGP key:
+
+pub   rsa4096 2025-02-05 [S]
+      87FA9C6D59EA8AF246EA6ADAD160B951629EEB81
+uid          marcusvrp (pass store) <marcusvrp@nixos.pass>
+
+A revocation certificate is a kind of "kill switch" to publicly
+declare that a key shall not anymore be used.  It is not possible
+to retract such a revocation certificate once it has been published.
+
+Use it to revoke this key in case of a compromise or loss of
+the secret key.  However, if the secret key is still accessible,
+it is better to generate a new revocation certificate and give
+a reason for the revocation.  For details see the description of
+of the gpg command "--generate-revocation" in the GnuPG manual.
+
+To avoid an accidental use of this file, a colon has been inserted
+before the 5 dashes below.  Remove this colon with a text editor
+before importing and publishing this revocation certificate.
+
+:-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iQI2BCABCAAgFiEEh/qcbVnqivJG6mra0WC5UWKe64EFAmejwAUCHQAACgkQ0WC5
+UWKe64HjPA//Qm9WHXoBvf0LM0F6Lsfv0fSQ83iM4WSAoPhMcfSx+v5Q2HOfVa4J
+Qx08P5fGrd+ijfgJlD8oS1iohxXH7Gj9SS97L6tOWaxuF/KNBxxCXCNvIYR3bNm0
+AV4xNHaBBxueeezT+24cBJrDCMR42oR6Aw9AuOG4xKLGSGb3ntxysOsHMVICnIpu
+XufAMD3nIIgVxWf2hodLAM2AV7ru2XUtOEwgpIBdrozdzP8YobAngxvb8P/hhYZW
+v+APwa+XaRMzQXAzxapkckGDbqNSUMSt6qQCWTDVpIBp6DpkgBCfjWULIwYpevuu
+5stam3pM74w10wTfzVo8iSBykNy0StGTVO8gr6sMESxKKnuGJhuIuyIFaYMe9XZX
+T+NcXKIY9dpjx7Y5VbXS7jCxdTIX0JUmvlDiGkNg780iSAPdHhEX+VjdZHrahBcf
+f2dEEpfYzkeHysH9qhP71AqRm8+KNd+fDB71sVsFvcwAwED6i2ROUX7hW8PD8VSw
+9uRf/afCmU/a9/Bopkn5XMUetwusmOXeTZmoT87TPSDFB2gbswTuKq1SwtkKrK/M
+HbgLEQXpU9JDmDFyFFMqCnLIHx08emks9qC9pZIUjd1ldQnz4WSFkVaDxVyfWRmK
+Y8wiVa2yiIGTx5sZRwwKjUhnrfHt+njdJ1KDTQbm3leos1nWFP2ipfM=
+=nD2D
+-----END PGP PUBLIC KEY BLOCK-----

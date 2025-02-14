@@ -1,6 +1,7 @@
 [user]
     name = Marcus V.
     email = mvrp21@inf.ufpr.br
+    # email = mkvreisdoefer@gmail.com
 
 [core]
     editor = vim
