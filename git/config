@@ -1,7 +1,7 @@
 [user]
     name = Marcus V.
-    # email = mvrp21@inf.ufpr.br
-    email = mkvreisdoefer@gmail.com
+    # ooh, you can have more than one
+    email = mvrp21@inf.ufpr.br
 
 [core]
     editor = vim
@@ -19,8 +19,8 @@
     ui = true
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [pager]
     # who tf wants the pager by default?
-	branch = false
+    branch = false
