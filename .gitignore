@@ -1,0 +1,5 @@
+gnupg/*
+!gnupg/gpg-agent.conf
+vim/.netrwhist
+vim/viminfo
+nvim/after/ftplugin/

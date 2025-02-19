@@ -1,0 +1,11 @@
+#
+# bash_profile
+#
+#
+#
+
+[[ -f "$XDG_CONFIG_HOME/bash/environment" ]] && . "$XDG_CONFIG_HOME/bash/environment"
+[[ -f "$XDG_CONFIG_HOME/bash/aliases" ]] && . "$XDG_CONFIG_HOME/bash/aliases"
+
+# and finally
+[[ -f "$XDG_CONFIG_HOME/bash/bashrc" ]] && . "$XDG_CONFIG_HOME/bash/bashrc"

@@ -1,0 +1,74 @@
+" Colorssssss
+syntax on
+set termguicolors
+colorscheme catppuccin_mocha
+hi Normal guibg=NONE ctermbg=NONE
+hi Visual guibg=green ctermbg=green
+highlight LineNr ctermfg=grey ctermbg=NONE guibg=NONE
+
+" Gotta see where we're at
+set number
+set relativenumber
+highlight CursorLine term=underline cterm=underline guibg=NONE
+set cursorline
+
+" I believe 4 is the most common value
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set smarttab
+
+" Got used to it, used to hate it
+set wrap
+
+" Makes sense to me
+set smartcase
+
+" The text you're editing should be somewhat centered
+set scrolloff=13
+
+" Better than the default behavior
+set incsearch
+set nohlsearch
+
+" Enable auto-completion
+set completeopt=menuone,noinsert,noselect
+
+" Show matching parentheses/brackets & current mode
+set showmatch
+set showmode
+
+let mapleader = " "
+nnoremap <leader>p <cmd>Ex<CR>
+
+" Window commands
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap _ <C-W><
+nnoremap + <C-W>>
+
+" I'm stupid
+cnoremap Wq wq
+cnoremap WQ wq
+cnoremap wq wq
+cnoremap wQ wq
+cnoremap Q q
+cnoremap W w
+
+" Hacky way to kinda merge system's and vim's clipboards
+autocmd TextYankPost * if (v:event.operator == 'y' || v:event.operator == 'd') | silent! execute 'call system("wl-copy", @")' | endif
+nnoremap p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+
+" Don't remeber
+nnoremap <leader>k <cmd>:tabn<CR>
+nnoremap <leader>j <cmd>:tabp<CR>
+nnoremap <leader>n <cmd>:tabnew<CR>
+
+" Remove viminfo from $HOME
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
+" Never actually helped me, and bothered me a number of times
+set noundofile

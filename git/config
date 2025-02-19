@@ -1,0 +1,26 @@
+[user]
+    name = Marcus V.
+    # email = mvrp21@inf.ufpr.br
+    email = mkvreisdoefer@gmail.com
+
+[core]
+    editor = vim
+
+[credential]
+    helper = cache
+
+[push]
+    default = simple
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+
+[init]
+	defaultBranch = main
+
+[pager]
+    # who tf wants the pager by default?
+	branch = false

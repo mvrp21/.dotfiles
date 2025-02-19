@@ -1,0 +1,51 @@
+#
+# aliases (& functions)
+#
+# ==================== XDG SHENANIGANS ===================== #
+alias gpg='gpg2 --homedir "$XDG_CONFIG_HOME"/gnupg'
+alias gpg2='gpg2 --homedir "$XDG_CONFIG_HOME"/gnupg'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+# turns out wget does not support env vars, so it needs either an alias or manual absolute path setting in the wgetrc
+
+# ==================== COLORS ===================== #
+alias ls='ls -v --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color'
+
+# ====================== LS ======================= #
+alias l='ls'
+alias sl='ls -hog'
+alias la='ls -A'
+alias ll='ls -Al'
+alias lal='ls -Al'
+alias lh='ls -Alh'
+alias s='ls -d .* || echo "no hidden files"'
+
+# =================== SHORTCUTS =================== #
+# There are problems with this, but they're no concern of mine
+function - {
+  cd -
+}
+
+alias cdd='cd ~/Downloads/'
+alias cdm='cd ~/Music/'
+alias cds='cd ~/Stuff/'
+alias cdb='cd ~/Stuff/books/'
+alias cdp='cd ~/Stuff/projects/'
+alias cdw='cd ~/Stuff/projects/website'
+alias cdt='cd ~/Stuff/projects/testing'
+
+# ==================== STOOPID ==================== #
+alias dc='cd'
+alias vim='nvim'
+alias vvim='nvim'
+alias vvi='nvim'
+alias vii='nvim'
+alias v='nvim'
+alias vi='nvim'
+alias miv='nvim'
+alias iv='nvim'
+alias ivm='nvim'
+alias vmi='nvim'
+alias c='clikan'

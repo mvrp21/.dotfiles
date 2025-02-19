@@ -1,0 +1,18 @@
+#
+# environment
+#
+
+# history settings
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+export HISTTIMEFORMAT="%d/%m/%y %T "
+export HISTSIZE=1000000
+export HISTCONTROL=ignoredups
+
+# XDG shenanigans
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc":"$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine"
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
