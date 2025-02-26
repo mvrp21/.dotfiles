@@ -34,7 +34,7 @@ alias cds='cd ~/Stuff/'
 alias cdb='cd ~/Stuff/books/'
 alias cdp='cd ~/Stuff/projects/'
 alias cdw='cd ~/Stuff/projects/website'
-alias cdt='cd ~/Stuff/projects/testing'
+alias cdh='cd ~/Stuff/HOME-LAB'
 
 # ==================== STOOPID ==================== #
 alias dc='cd'

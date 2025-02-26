@@ -32,5 +32,5 @@ decorations = "None"
 x = 5
 y = 5
 
-[general]
-import = ["/home/marcusvrp/.config/alacritty/themes/mocha.toml"]
+[colors.primary]
+background = "#101010"
